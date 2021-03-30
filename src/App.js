@@ -18,12 +18,17 @@ const customStyle = `
 	}
 	#blip-chat-header {
 		background-color: #CC2025 !important;
-		
+		visibility:hidden;
 	}
-	h5{
-		font-weight: normal;
+	i{
+		font-style:normal;
 		color: #CC2025;
-		margin: 0;
+	}
+	#message-input .send-button {
+		background-color: #CC2025 !important;
+	}
+	.blip-card .left a.next, .blip-card .left a.prev{
+		color: #CC2025 !important; 
 	}
 `
 
