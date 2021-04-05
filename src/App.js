@@ -34,19 +34,26 @@ const customStyle = `
 
 function App() {
 
-  useEffect(() => {
-    new BlipChat()
-      .withAppKey("ZXNzZTplNTVkZjcyZS1iMWU3LTQ1NTQtYTllNi1hMzhlYzY0YjUzMWE=")
-      .withButton({ color: "#CC2025" })
-	    .withCustomStyle(customStyle)
-      .build();
-  }, [])
-
-  return (
-    <div>
-       <h1>Blip Orbi</h1>
-    </div>
-  );
-}
-
-export default App;
+	useEffect(() => {
+	  const windowUrl = window.location.search;
+	  const params = new URLSearchParams(windowUrl);
+	  const fullName = params.get('name')
+  
+	  new BlipChat()
+		.withAppKey("ZXNzZTplNTVkZjcyZS1iMWU3LTQ1NTQtYTllNi1hMzhlYzY0YjUzMWE=")
+		.withButton({ color: "#CC2025" })
+		  .withCustomStyle(customStyle)
+		.withAccount({
+		  name: fullName
+		})
+		.build();
+	}, [])
+  
+	return (
+	  <div>
+		 <h1>Blip Orbi</h1>
+	  </div>
+	);
+  }
+  
+  export default App;
