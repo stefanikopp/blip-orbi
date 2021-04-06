@@ -34,6 +34,9 @@ const customStyle = `
 		padding-top:0;
 		height: 100%;
 	}
+	.blip-cards-items-list {
+		padding: 0 10px 0px 10px;
+	}
 `
 
 function App() {
