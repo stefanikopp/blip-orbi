@@ -40,7 +40,7 @@ function App() {
 	  const fullName = params.get('name')
   
 	  new BlipChat()
-		.withAppKey("ZXNzZTplNTVkZjcyZS1iMWU3LTQ1NTQtYTllNi1hMzhlYzY0YjUzMWE=")
+		.withAppKey("b3JiaXRlc3RlbW9iaWxlOmI5MDdiNTI4LWYzNjgtNDI3OC1iYzEzLWJkNzM1NWU1YWZiMA==")
 		.withButton({ color: "#CC2025" })
 		  .withCustomStyle(customStyle)
 		.withAccount({
