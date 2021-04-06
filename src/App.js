@@ -39,21 +39,21 @@ function App() {
 	  const params = new URLSearchParams(windowUrl);
 	  const fullName = params.get('name')
   
-	  new BlipChat()
-		.withAppKey("b3JiaXRlc3RlbW9iaWxlOmI5MDdiNTI4LWYzNjgtNDI3OC1iYzEzLWJkNzM1NWU1YWZiMA==")
+	  const blipClient = new BlipChat()
+	  
+	  blipClient
+	  	.withAppKey("b3JiaXRlc3RlbW9iaWxlOmI5MDdiNTI4LWYzNjgtNDI3OC1iYzEzLWJkNzM1NWU1YWZiMA==")
 		.withButton({ color: "#CC2025" })
-		  .withCustomStyle(customStyle)
+		.withCustomStyle(customStyle)
 		.withAccount({
 		  name: fullName
 		})
 		.build();
+
+		blipClient.toogleChat();
 	}, [])
   
-	return (
-	  <div>
-		 <h1>Blip Orbi</h1>
-	  </div>
-	);
+	return null;
   }
   
   export default App;
