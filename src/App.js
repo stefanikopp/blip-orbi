@@ -38,6 +38,7 @@ function App() {
 	  const windowUrl = window.location.search;
 	  const params = new URLSearchParams(windowUrl);
 	  const fullName = params.get('name')
+	  const email = params.get('email')
   
 	  const blipClient = new BlipChat()
 	  
@@ -46,7 +47,8 @@ function App() {
 		.withButton({ color: "#CC2025" })
 		.withCustomStyle(customStyle)
 		.withAccount({
-		  name: fullName
+		  fullname: fullName,
+		  email
 		})
 		.build();
 
