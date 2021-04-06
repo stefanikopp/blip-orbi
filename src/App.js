@@ -30,6 +30,10 @@ const customStyle = `
 	.blip-card .left a.next, .blip-card .left a.prev{
 		color: #CC2025 !important; 
 	}
+	#app {
+		padding-top:0;
+		height: 100%;
+	}
 `
 
 function App() {
